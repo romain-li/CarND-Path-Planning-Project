@@ -1,5 +1,15 @@
 # CarND-Path-Planning-Project
 Self-Driving Car Engineer Nanodegree Program
+
+## Reflection
+
+1. Use car's status and sensor fusion to predict all vehicles' status after the previous command.
+2. Check every car's position and speed, get every lane speed or "can't change to it".
+3. Define lane's score using convolution of lane speed, that can change lane across a slow lane.
+4. Set goal speed and s to the highest score lane, if we are changing lane, keep the speed unchanged to avoid acc limit exceeded.
+5. If some vehicle is too close to us, make an emergency braking.
+6. Accelerate or brake to goal speed.
+7. Get 5 points and using spline to get the smoothly path. (Copy code from walk trough video, I've tried to using JMT get the path, but it's difficult to smoothly)
    
 ### Simulator.
 You can download the Term3 Simulator which contains the Path Planning Project from the [releases tab (https://github.com/udacity/self-driving-car-sim/releases).
